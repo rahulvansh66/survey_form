@@ -1,0 +1,222 @@
+<lhtml>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='mystyle.css') }}">
+      <title>Survey</title>
+    </head>
+    <body>
+      <div class="ctrlqFormContentWrapper">
+        <div class="ctrlqHeaderMast">
+            <div style="text-align: center; margin-top: 30px;">
+                <img src="{{ url_for('static',filename='logo2.jpg') }}" alt="DA-IICT logo">
+            </div>
+            
+        </div>
+        <div class="ctrlqCenteredContent">
+          <div class="ctrlqFormCard">
+            <div class="ctrlqAccent"></div>
+            <div class="ctrlqFormContent">
+  
+              <form action="/surveys/news_headline_subjectivity" method = 'POST'>  
+  
+                <div class="row">
+                  <div class="input-field col s12">
+                    <h4>Evaluation Metric Correlation Survey
+</h4>
+                    <p> You are supposed to rate the summary pair based on similarity. The meaning of each score is given below.
+                      <br> 1: Almost different, 2: Very dissimilar, 3: Somewhat dissimilar, 4: Somewhat similar,  5: Very similar, 6: Almost same</p>
+                  </div>
+                </div>
+  
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="name" name="name" type="text" class="validate" data-error="#e1" >
+                    <label for="name">Your Name (optional)</label>
+                    <div id="e1"></div>
+                  </div>
+                </div>
+  
+                <div class="row">
+                  <div class="input-field col s12">
+                  <p for='1'>1st summary: {{lst[0][4]}}</p>
+                  <p for='1'>2nd summary: {{lst[0][5]}}</p>
+                  <input name="1" type="radio" id="11" value="1" required>
+                  <label for='11'>1</label>
+  
+                  <input name="1" type="radio" id="12" value="2">
+                  <label for='12'>2</label>
+  
+                  <input name="1" type="radio" id="13" value="3">
+                  <label for='13'>3</label>
+  
+                  <input name="1" type="radio" id="14" value="4">
+                  <label for='14'>4</label>
+  
+                  <input name="1" type="radio" id="15" value="5">
+                  <label for='15'>5</label>
+  
+                  <input name="1" type="radio" id="16" value="6">
+                  <label for='16'>6</label>
+  
+                </div></div>
+                              
+                <br><hr>
+
+                <div class="row">
+                  <div class="input-field col s12">
+                  <p for='2'>1st summary: {{lst[1][4]}}</p>
+                  <p for='2'>2nd summary: {{lst[1][5]}}</p>
+                  <input name="2" type="radio" id="21" value="1" required>
+                  <label for='21'>1</label>
+  
+                  <input name="2" type="radio" id="22" value="2">
+                  <label for='22'>2</label>
+  
+                  <input name="2" type="radio" id="23" value="3">
+                  <label for='23'>3</label>
+  
+                  <input name="2" type="radio" id="24" value="4">
+                  <label for='24'>4</label>
+  
+                  <input name="2" type="radio" id="25" value="5">
+                  <label for='25'>5</label>
+  
+                  <input name="2" type="radio" id="26" value="6">
+                  <label for='26'>6</label>
+  
+  
+                </div></div>
+                
+                <br><hr>
+               
+                <div class="input-field col s12">
+                  <p for="3">1st summary: {{lst[2][4]}}</p>
+                  <p for="3">2nd summary: {{lst[2][5]}}</p>
+                  <input name="3" type="radio" id="31" value="1" data-error="#e4" required>
+                  <label for="31">1</label>
+  
+                  <input name="3" type="radio" id="32" value="2">
+                  <label for="32">2</label>
+  
+                  <input name="3" type="radio" id="33" value="3">
+                  <label for="33">3</label>
+  
+                  <input name="3" type="radio" id="34" value="4">
+                  <label for="34">4</label>
+  
+                  <input name="3" type="radio" id="35" value="5">
+                  <label for="35">5</label>
+  
+                  <input name="3" type="radio" id="36" value="6">
+                  <label for="36">6</label>
+  
+  
+                </div>
+                
+                <br><hr>
+                
+                <div class="input-field col s12">
+                  <p for="4">1st summary: {{lst[3][4]}}</p>
+                  <p for="4">2nd summary: {{lst[3][5]}}</p>
+                  <input name="4" type="radio" id="41" value="1" data-error="#e4" required>
+                  <label for="41">1</label>
+  
+                  <input name="4" type="radio" id="42" value="2">
+                  <label for="42">2</label>
+  
+                  <input name="4" type="radio" id="43" value="3">
+                  <label for="43">3</label>
+  
+                  <input name="4" type="radio" id="44" value="4">
+                  <label for="44">4</label>
+  
+                  <input name="4" type="radio" id="45" value="5">
+                  <label for="45">5</label>
+  
+                  <input name="4" type="radio" id="46" value="6">
+                  <label for="46">6</label>
+  
+                </div>
+                
+                <br><hr>
+                
+                <div class="input-field col s12">
+                  <p for="5">1st summary: {{lst[4][4]}}</p>
+                  <p for="5">2nd summary: {{lst[4][5]}}</p>
+                  <input name="5" type="radio" id="51" value="1" data-error="#e4" required>
+                  <label for="51">1</label>
+  
+                  <input name="5" type="radio" id="52" value="2">
+                  <label for="52">2</label>
+  
+                  <input name="5" type="radio" id="53" value="3">
+                  <label for="53">3</label>
+  
+                  <input name="5" type="radio" id="54" value="4">
+                  <label for="54">4</label>
+  
+                  <input name="5" type="radio" id="55" value="5">
+                  <label for="55">5</label>
+  
+                  <input name="5" type="radio" id="56" value="6">
+                  <label for="56">6</label>
+  
+  
+                </div>
+                
+                <br><hr>
+                
+                <div class="input-field col s12">
+                  <p for="6">1st summary: {{lst[5][4]}}</p>
+                  <p for="6">2nd summary: {{lst[5][5]}}</p>
+                  <input name="6" type="radio" id="61" value="1" data-error="#e4" required>
+                  <label for="61">1</label>
+  
+                  <input name="6" type="radio" id="62" value="2">
+                  <label for="62">2</label>
+  
+                  <input name="6" type="radio" id="63" value="3">
+                  <label for="63">3</label>
+  
+                  <input name="6" type="radio" id="64" value="4">
+                  <label for="64">4</label>
+  
+                  <input name="6" type="radio" id="65" value="5">
+                  <label for="65">5</label>
+  
+                  <input name="6" type="radio" id="66" value="6">
+                  <label for="66">6</label>
+  
+  
+                </div>
+                 
+                <br><hr>
+                <!-- <div class="row justify-content-center">
+                  <div class="input-field col m6 s12" >
+                    <button type="submit" class="waves-effect waves-light btn-large">Submit</button> 
+                  </div>
+                </div> -->
+
+                <div style="text-align: center;">
+                    <button type="submit" class="waves-effect waves-light btn-large">Submit</button> 
+                </div>
+                
+              </form>
+             Disclaimer: This data is solely for research purpose. You may optionally add your name, which will be added to our contributor list when this dataset will be published.
+            </div>
+          </div>
+        </div>
+      </div>
+  
+  
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/additional-methods.min.js"></script>
+  
+    </body>
+  
+    </html>
