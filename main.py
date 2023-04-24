@@ -4,6 +4,7 @@ import random
 import copy
 import platform
 import flask
+import os
 
 app = Flask(__name__)
 # app = Flask(__name__,
@@ -57,5 +58,7 @@ def news_headline_subjectivity():
     #html template: https://codepen.io/emcmillan13/pen/yzgawM
 
 
-app.run(host='0.0.0.0', port=81, debug=True)
+if __name__ == '__main__':
+    app.run(debug=True, port=os.getenv("PORT", default=5000))
+# app.run(host='0.0.0.0', port=81, debug=True)
 # https://stackoverflow.com/questions/66104059/passing-radio-button-value-on-page-refresh-in-flask
